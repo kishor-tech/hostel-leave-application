@@ -1,0 +1,73 @@
+/* Container */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  text-align: center;
+  padding: 20px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-image: linear-gradient(#5b9279,white);
+    
+}
+
+/* Heading */
+.home-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+/* Description */
+.home-description {
+  color: #555;
+  max-width: 600px;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+/* Button group */
+.home-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+/* Common button style */
+.home-button {
+  padding: 12px 24px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* Button hover animation */
+.home-button:hover {
+  transform: scale(1.05);
+}
+
+/* Specific button colors */
+.parent-btn {
+  background: #3b82f6; /* Blue */
+}
+.parent-btn:hover {
+  background: #2563eb;
+}
+
+.warden-btn {
+  background: #22c55e; /* Green */
+}
+.warden-btn:hover {
+  background: #16a34a;
+}
+
+.about-btn {
+  background: #6b7280; /* Gray */
+}
+.about-btn:hover {
+  background: #4b5563;
+}
