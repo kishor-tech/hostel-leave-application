@@ -1,0 +1,86 @@
+/* Container centers the whole warden login form in viewport */
+.warden-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: linear-gradient(#5b9279,white);
+  font-family: Arial, sans-serif;
+}
+
+/* Warden login box/form styling */
+.warden-login-box {
+  background: #5b9279;
+  padding: 30px 40px;
+  border-radius: 10px;
+  border: 2px solid white;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+  width: 350px;
+  text-align: left;
+  color: white;
+}
+
+/* Labels as blocks with spacing and white */
+.warden-login-box label {
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 20px 0 6px 0;
+  color: white;
+}
+
+/* Radio group container for horizontal layout */
+.radio-group {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+/* Individual radio label styling */
+.radio-label {
+  cursor: pointer;
+  font-weight: normal;
+  font-size: 0.95rem;
+  color: white;
+  user-select: none;
+}
+
+/* Inputs full width with padding and white text */
+.warden-login-box input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid white;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  box-sizing: border-box;
+  background-color: white;
+  color: #417559;
+}
+
+/* Submit button styling, centered block with reversed colors */
+.warden-login-box button {
+  display: block;
+  width: 80%;
+  margin: 20px auto 0 auto;
+  padding: 12px;
+  background: white;
+  color: #5b9279;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.warden-login-box button:hover {
+  background: black;
+  transform: scale(1.02);
+}
+
+/* Focus effect for inputs */
+.warden-login-box input:focus {
+  border-color: black;
+  outline: none;
+}
