@@ -32,7 +32,7 @@ function ParentLogin() {
   return (
     <div className="container">
       <form className="login-box" onSubmit={handleSubmit}>
-        <label htmlFor="name">Name</label>
+        <label htmlFor="name">Name of the Student</label>
         <input
           type="text"
           id="name"
@@ -42,11 +42,11 @@ function ParentLogin() {
           required
         />
 
-        <label htmlFor="regno">Reg.no</label>
+        <label htmlFor="regno">Registration No. of the  student</label>
         <input
           type="text"
           id="regno"
-          placeholder="Register no of student"
+          placeholder="Register No. of the student"
           value={formData.regno}
           onChange={handleChange}
           required
@@ -84,6 +84,7 @@ function ParentLogin() {
           Submit
         </button>
       </form>
+      
     </div>
   );
 }

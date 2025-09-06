@@ -18,7 +18,7 @@
   box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
   width: 350px;
   text-align: left;
-  color: white; /* text color inside the box */
+  color: black; /* text color inside the box */
 }
 
 /* Labels as blocks with spacing and white color */
@@ -43,7 +43,7 @@
   font-size: 0.95rem;
   box-sizing: border-box;
   background-color: white; /* slightly darker background for inputs */
-  color: white;
+  color: black;
 }
 
 /* Container to hold OTP input and button side by side */
@@ -96,8 +96,8 @@
 /* Submit button styling, centered block with reversed colors */
 #sub {
   display: block;
-  width: 80%;
-  margin: 20px auto 0 auto;
+  width: 50%;
+  margin: 20px 0 0 0;
   padding: 12px;
   background: white;
   color: #5b9279;
@@ -107,6 +107,7 @@
   font-weight: bold;
   cursor: pointer;
   transition: background 0.3s ease, transform 0.2s ease;
+  
 }
 
 #sub:hover {
