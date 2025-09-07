@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./parentlogin.css";
 
 function ParentLogin() {
@@ -9,22 +10,17 @@ function ParentLogin() {
     otp: "",
   });
 
-  // Handle text input change
   const handleChange = (e) => {
     const { id, value } = e.target;
     setFormData((prev) => ({ ...prev, [id]: value }));
   };
 
-  // Handle Generate OTP button click
   const generateOtp = () => {
-    // Placeholder: implement real OTP generation logic here
     alert("OTP generated and sent!");
   };
 
-  // Handle form submit
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Implement form submission logic, e.g. validation or API call
     console.log("Form Data:", formData);
     alert("Form submitted!");
   };
@@ -32,7 +28,7 @@ function ParentLogin() {
   return (
     <div className="container">
       <form className="login-box" onSubmit={handleSubmit}>
-        <label htmlFor="name">Name of the Student</label>
+        <label htmlFor="name">Name</label>
         <input
           type="text"
           id="name"
@@ -42,11 +38,11 @@ function ParentLogin() {
           required
         />
 
-        <label htmlFor="regno">Registration No. of the  student</label>
+        <label htmlFor="regno">Reg.no</label>
         <input
           type="text"
           id="regno"
-          placeholder="Register No. of the student"
+          placeholder="Register no of student"
           value={formData.regno}
           onChange={handleChange}
           required
@@ -67,7 +63,7 @@ function ParentLogin() {
           <input
             type="number"
             id="otp"
-            placeholder="Enter otp"
+            placeholder="Enter OTP"
             value={formData.otp}
             onChange={handleChange}
             required
@@ -83,8 +79,11 @@ function ParentLogin() {
         <button id="sub" type="submit">
           Submit
         </button>
+
+        <p className="register-link">
+          Don't have an account? <Link to="/parentregister">Register here</Link>
+        </p>
       </form>
-      
     </div>
   );
 }

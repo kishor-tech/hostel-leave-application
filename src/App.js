@@ -3,6 +3,7 @@ import Home from "./pages/home";
 import ParentLogin from "./pages/parentlogin";
 import WardenLogin from "./pages/wardenlogin";
 import AboutUs from "./pages/aboutus";
+import ParentRegister from "./pages/parentregister";  
 
 function App() {
   return (
@@ -12,6 +13,8 @@ function App() {
         <Route path="/parent-login" element={<ParentLogin />} />
         <Route path="/warden-login" element={<WardenLogin />} />
         <Route path="/aboutus" element={<AboutUs />} />
+        <Route path="/parentregister" element={<ParentRegister />} />
+      
       </Routes>
     </Router>
   );
