@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./parentlogin.css";
 
 function ParentLogin() {
@@ -9,6 +9,8 @@ function ParentLogin() {
     password: "",
     otp: "",
   });
+
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { id, value } = e.target;
@@ -21,8 +23,9 @@ function ParentLogin() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form Data:", formData);
-    alert("Form submitted!");
+    alert("Login submitted!");
+    // Route to parentfrontend with form data as state
+    navigate("/parentfrontend", { state: formData });
   };
 
   return (
@@ -68,12 +71,7 @@ function ParentLogin() {
             onChange={handleChange}
             required
           />
-          <input
-            type="button"
-            id="gen-otp"
-            value="Generate OTP"
-            onClick={generateOtp}
-          />
+          <input type="button" id="gen-otp" value="Generate OTP" onClick={generateOtp} />
         </div>
 
         <button id="sub" type="submit">

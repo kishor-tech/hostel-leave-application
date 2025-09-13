@@ -1,0 +1,169 @@
+/* Background with gradient */
+.warden-page-background {
+  min-height: 100vh;
+  background-image: linear-gradient(#5b9279, white);
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Content card */
+.warden-content-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px #eee;
+  padding: 20px;
+  max-width: 400px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Title */
+.warden-title {
+  margin-bottom: 5px;
+  font-size: 1.35rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.warden-icon {
+  margin-right: 8px;
+  font-size: 1.5rem;
+}
+
+/* Subtitle */
+.warden-subtitle {
+  color: #555;
+  font-size: 0.95rem;
+  margin-bottom: 16px;
+}
+
+/* No requests message */
+.warden-no-requests {
+  color: #888;
+  font-size: 1rem;
+  padding: 18px 0;
+}
+
+/* Leave request card */
+.leave-request-card {
+  background: #fafbfc;
+  border-radius: 8px;
+  box-shadow: 0 1px 5px #eee;
+  border: 1px solid #e7e7ef;
+  padding: 16px;
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+/* Student name */
+.student-name {
+  font-weight: 700;
+  font-size: 1.04rem;
+  margin-bottom: 4px;
+}
+
+/* Register no and reason */
+.register-no,
+.reason {
+  color: #666;
+  font-size: 0.98rem;
+  margin-bottom: 8px;
+}
+
+/* Dates container */
+.dates {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.95rem;
+  color: #444;
+  margin-bottom: 12px;
+}
+
+.date-item {
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+}
+
+/* Status text colors */
+.status {
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.status.pending {
+  color: #c68600;
+}
+
+.status.approved {
+  color: #22b573;
+}
+
+.status.denied {
+  color: #d0312d;
+}
+
+/* Action buttons */
+.action-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+/* Approve button */
+.btn-approve {
+  flex: 1;
+  background-color: #22b573;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 0;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-approve:hover {
+  background-color: #1a8a55;
+}
+
+/* Deny button */
+.btn-deny {
+  flex: 1;
+  background-color: #d0312d;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 0;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-deny:hover {
+  background-color: #a62321;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .warden-content-card {
+    padding: 16px;
+    max-width: 100%;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+  }
+
+  .btn-approve,
+  .btn-deny {
+    width: 100%;
+  }
+}

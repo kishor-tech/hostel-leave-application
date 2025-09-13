@@ -1,11 +1,12 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useLeaveContext } from "./leavecontext";
 import "./wardenlogin.css";
 
 function WardenLogin() {
-  const [formData, setFormData] = useState({
-    year: "",
-    password: "",
-  });
+  const [formData, setFormData] = useState({ year: "", password: "" });
+  const { loginWarden } = useLeaveContext();
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -14,8 +15,9 @@ function WardenLogin() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Warden Login Data:", formData);
     alert("Warden login submitted!");
+    loginWarden();
+    navigate("/warden-requests");
   };
 
   return (
@@ -37,7 +39,6 @@ function WardenLogin() {
             </label>
           ))}
         </div>
-
         <label htmlFor="password">Password</label>
         <input
           type="password"
@@ -48,7 +49,6 @@ function WardenLogin() {
           onChange={handleChange}
           required
         />
-
         <button type="submit">Login</button>
       </form>
     </div>

@@ -1,11 +1,46 @@
-/* Full page background */
-.leave-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+/* Background and layout */
+.leave-background {
+  min-height: 100vh;
+  width: 100vw;
   background-image: linear-gradient(#5b9279, white);
   font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Student details always at the top, black text, non-overlapping */
+.user-details {
+  width: 90vw;
+  max-width: 420px;
+  color: #000;
+  margin-top: 50px;
+  margin-bottom: 24px;
+  font-size: 1.2rem;
+  background: rgba(255,255,255,0.7);
+  padding: 16px 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 14px rgba(0,0,0,0.08);
+  text-align: left;
+}
+
+.user-details h2 {
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #000;
+}
+
+.user-details p {
+  margin: 4px 0;
+  font-weight: normal;
+  color: #000;
+}
+
+.user-details strong {
+  font-weight: bold;
+  color: black;
 }
 
 /* Leave application box */
@@ -16,12 +51,27 @@
   border: 2px solid white;
   box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
   width: 400px;
+  max-width: 95vw;
   text-align: left;
   color: white;
 }
 
+@media (max-width: 600px) {
+  .user-details {
+    width: 95vw;
+    padding: 10px 5vw;
+    font-size: 1.05rem;
+    margin-top: 18px;
+    margin-bottom: 16px;
+  }
+  .leave-form {
+    width: 95vw;
+    padding: 24px 7vw;
+  }
+}
+
 /* Title */
-.leave-container h1 {
+.leave-form h1 {
   text-align: center;
   margin-bottom: 20px;
   font-size: 1.8rem;
@@ -94,4 +144,3 @@
 .logout-btn:hover {
   background: #bbb;
 }
-
