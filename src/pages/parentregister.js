@@ -1,7 +1,7 @@
 // ParentRegister.js
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./parentregister.css";
+import "./parentregister.css"; // keep the CSS import
 
 function ParentRegister() {
   const navigate = useNavigate();
@@ -32,7 +32,7 @@ function ParentRegister() {
       return;
     }
 
-    // Here you can also send formData to backend API
+    // TODO: send formData to backend API here
 
     // Redirect to ParentLogin page
     navigate("/parentlogin");

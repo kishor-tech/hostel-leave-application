@@ -1,60 +1,68 @@
-/* Container centers the registration form in the viewport */
-.register-container {
+/* Full page background */
+.leave-container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-image: linear-gradient(#5b9279,white);
-  color: black;
+  background-image: linear-gradient(#5b9279, white);
   font-family: Arial, sans-serif;
 }
 
-/* Registration box styling */
-.register-form {
+/* Leave application box */
+.leave-form {
   background: #5b9279;
   padding: 30px 40px;
   border-radius: 10px;
   border: 2px solid white;
   box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
-  width: 380px;
+  width: 400px;
   text-align: left;
   color: white;
 }
 
 /* Title */
-.register-container h2 {
+.leave-container h1 {
   text-align: center;
   margin-bottom: 20px;
   font-size: 1.8rem;
   color: white;
 }
 
-/* Input fields */
-.register-form input[type="text"],
-.register-form input[type="password"],
-.register-form input[type="number"] {
+/* Labels */
+.leave-form label {
+  display: block;
+  margin: 10px 0 6px;
+  font-weight: bold;
+  color: white;
+}
+
+/* Input fields & textarea */
+.leave-form input[type="date"],
+.leave-form textarea {
   width: 100%;
   padding: 10px;
-  margin: 10px 0;
-  border: 3px solid #5b9279;
+  margin-bottom: 12px;
+  border: 1px solid white;
   border-radius: 6px;
   font-size: 0.95rem;
   box-sizing: border-box;
   background-color: white;
   color: black;
+  resize: none;
 }
 
 /* Focus effect */
-.register-form input:focus {
+.leave-form input:focus,
+.leave-form textarea:focus {
   border-color: #d3e0d8;
   outline: none;
 }
 
 /* Submit button */
-.register-form button {
+.leave-form button {
   display: block;
   width: 100%;
-  margin-top: 20px;
+  margin-top: 10px;
   padding: 12px;
   background: white;
   color: #5b9279;
@@ -66,7 +74,24 @@
   transition: background 0.3s ease, transform 0.2s ease;
 }
 
-.register-form button:hover {
+.leave-form button:hover {
   background: #d3e0d8;
   transform: scale(1.02);
 }
+
+/* Logout button */
+.logout-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #ccc;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.logout-btn:hover {
+  background: #bbb;
+}
+
